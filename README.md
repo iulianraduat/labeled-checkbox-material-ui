@@ -76,3 +76,7 @@ export default App;
 ### 1.0.1
 
 - onChange is optional as it is not requried when the checkbox is disabled
+
+### 1.0.2
+
+- fixed the pass of styles from parent to this component

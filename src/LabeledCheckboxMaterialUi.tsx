@@ -50,7 +50,7 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 
 		return {
 			...styles.label,
-			styleLabel
+			...styleLabel
 		};
 	}
 
@@ -63,7 +63,7 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 
 		return {
 			...styles.checkbox,
-			styleCheckbox
+			...styleCheckbox
 		};
 	}
 

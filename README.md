@@ -16,7 +16,7 @@ The component accepts the props defined bellow in the table.
 | checked       | boolean                    | no       | false     | If true, the checkbox is selected                               |
 | disabled      | boolean                    | no       | false     | The component is disabled                                       |
 | label         | string                     | yes      | -         | The label of the checkbox                                       |
-| onChange      | (checked: boolean) => void | yes      | -         | The callback function called when the checkbox value is changed |
+| onChange      | (checked: boolean) => void | no       | undefined | The callback function called when the checkbox value is changed |
 | styleCheckbox | CSSProperties              | no       | undefined | The style applied to the checkbox                               |
 | styleLabel    | CSSProperties              | no       | undefined | The style applied to the label                                  |
 | value         | string                     | no       | undefined | The value of the checkbox                                       |
@@ -72,3 +72,7 @@ export default App;
 ### 1.0.0
 
 - labeled-checkbox-material-ui is made publicly available
+
+### 1.0.1
+
+- onChange is optional as it is not requried when the checkbox is disabled

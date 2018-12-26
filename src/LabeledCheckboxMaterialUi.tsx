@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FormControlLabel, Checkbox } from '@material-ui/core';
-import { isEmpty } from 'lodash';
+import { isEmpty, isFunction } from 'lodash';
 
 const styles: { [key: string]: React.CSSProperties } = {
 	checkbox: {
@@ -67,7 +67,13 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 		};
 	}
 
-	private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => this.props.onChange(event.target.checked);
+	private handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const { onChange } = this.props;
+
+		if (isFunction(onChange)) {
+			(onChange as Function)(event.target.checked);
+		}
+	};
 }
 
 interface LabeledCheckboxMaterialUiProps {
@@ -75,7 +81,7 @@ interface LabeledCheckboxMaterialUiProps {
 	checked?: boolean;
 	disabled?: boolean;
 	label: string;
-	onChange: (checked: boolean) => void;
+	onChange?: (checked: boolean) => void;
 	styleCheckbox?: React.CSSProperties;
 	styleLabel?: React.CSSProperties;
 	value?: string;

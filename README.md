@@ -80,4 +80,8 @@ export default App;
 
 ### 1.0.2
 
-- fixed the pass of styles from parent to this component
+- Fixed the pass of styles from parent to this component
+
+### 1.0.2
+
+- Updated packages

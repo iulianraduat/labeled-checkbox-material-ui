@@ -29,6 +29,7 @@ The component accepts the props defined bellow in the table.
 | -------------------------------: | :---------: | :----: |
 |                            1.0.x |    3.6.0    | 16.6.3 |
 |                            1.1.x |    3.9.1    | 16.8.1 |
+|                            1.2.x |    3.9.3    | 16.8.6 |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -82,6 +83,10 @@ export default App;
 
 - Fixed the pass of styles from parent to this component
 
-### 1.0.2
+### 1.1.0
+
+- Updated packages
+
+### 1.2.0
 
 - Updated packages

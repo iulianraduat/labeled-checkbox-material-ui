@@ -11,7 +11,7 @@ The component accepts the props defined bellow in the table.
 ### Props accepted by LabeledCheckboxMaterialUi
 
 | Name          | Type                       | Required | Default   | Description                                                     |
-| ------------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
+|---------------|----------------------------|----------|-----------|-----------------------------------------------------------------|
 | color         | string                     | no       | primary   | The color of the checkbox                                       |
 | checked       | boolean                    | no       | false     | If true, the checkbox is selected                               |
 | disabled      | boolean                    | no       | false     | The component is disabled                                       |
@@ -26,10 +26,11 @@ The component accepts the props defined bellow in the table.
 ## Versions
 
 | LabeledCheckboxMaterialUi _uses_ | Material-ui | React  |
-| -------------------------------: | :---------: | :----: |
+|---------------------------------:|:-----------:|:------:|
 |                            1.0.x |    3.6.0    | 16.6.3 |
 |                            1.1.x |    3.9.1    | 16.8.1 |
 |                            1.2.x |    3.9.3    | 16.8.6 |
+|                            2.0.x |    4.0.2    | 16.8.6 |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -88,5 +89,9 @@ export default App;
 - Updated packages
 
 ### 1.2.0
+
+- Updated packages
+
+### 2.0.0
 
 - Updated packages

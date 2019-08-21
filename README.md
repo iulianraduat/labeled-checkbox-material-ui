@@ -4,6 +4,10 @@ A material-ui component which combines a checkbox and a label in a single compon
 
 ---
 
+## Demo
+
+You can access the storybook for this component [here](https://iulian-radu-at.github.io/labeled-checkbox-material-ui/).
+
 ## Props
 
 The component accepts the props defined bellow in the table.
@@ -32,6 +36,7 @@ The component accepts the props defined bellow in the table.
 |                            1.2.x |    3.9.3    | 16.8.6 |
 |                            2.0.x |    4.0.2    | 16.8.6 |
 |                            2.1.x |    4.2.0    | 16.8.6 |
+|                            2.2.x |    4.3.2    | 16.9.0 |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -99,4 +104,10 @@ export default App;
 
 ### 2.1.0
 
+- Updated packages
+
+### 2.2.0
+
+- Added a storybook
+- Removed lodash
 - Updated packages

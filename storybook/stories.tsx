@@ -22,6 +22,7 @@ const showSelectedValue = (id: string) => (checked: boolean) =>
   (document.getElementById(id).textContent = checked ? 'selected' : 'not selected');
 
 storiesOf('LabeledCheckboxMaterialUi', module)
+  .addParameters({ options: { showPanel: false } })
   .add('with label', () => (
     <div>
       <LabeledCheckboxMaterialUi label="I like it" onChange={showSelectedValue('lcbmui1')} />

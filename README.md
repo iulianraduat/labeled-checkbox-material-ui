@@ -37,6 +37,7 @@ The component accepts the props defined bellow in the table.
 |                            2.0.x |    4.0.2    | 16.8.6 |
 |                            2.1.x |    4.2.0    | 16.8.6 |
 |                            2.2.x |    4.3.2    | 16.9.0 |
+|                            2.3.x |    4.9.0    | 16.9.0 |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -110,4 +111,8 @@ export default App;
 
 - Added a storybook
 - Removed lodash
+- Updated packages
+
+### 2.3.0
+
 - Updated packages

@@ -1,4 +1,4 @@
-# labeled-checkbox-material-ui
+# labeled-checkbox-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/labeled-checkbox-material-ui "Weekly downloads")
 
 A material-ui component which combines a checkbox and a label in a single component
 
@@ -15,7 +15,7 @@ The component accepts the props defined bellow in the table.
 ### Props accepted by LabeledCheckboxMaterialUi
 
 | Name          | Type                       | Required | Default   | Description                                                     |
-|---------------|----------------------------|----------|-----------|-----------------------------------------------------------------|
+| ------------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
 | color         | string                     | no       | primary   | The color of the checkbox                                       |
 | checked       | boolean                    | no       | false     | If true, the checkbox is selected                               |
 | disabled      | boolean                    | no       | false     | The component is disabled                                       |
@@ -30,7 +30,7 @@ The component accepts the props defined bellow in the table.
 ## Versions
 
 | LabeledCheckboxMaterialUi _uses_ | Material-ui | React  |
-|---------------------------------:|:-----------:|:------:|
+| -------------------------------: | :---------: | :----: |
 |                            1.0.x |    3.6.0    | 16.6.3 |
 |                            1.1.x |    3.9.1    | 16.8.1 |
 |                            1.2.x |    3.9.3    | 16.8.6 |
@@ -38,6 +38,7 @@ The component accepts the props defined bellow in the table.
 |                            2.1.x |    4.2.0    | 16.8.6 |
 |                            2.2.x |    4.3.2    | 16.9.0 |
 |                            2.3.x |    4.9.0    | 16.9.0 |
+|                            2.4.x |    4.9.7    | 16.9.0 |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -116,3 +117,8 @@ export default App;
 ### 2.3.0
 
 - Updated packages
+
+### 2.4.0
+
+- Updated packages
+- Moved from npm to yarn

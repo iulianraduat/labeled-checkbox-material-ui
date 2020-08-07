@@ -1,1 +1,1 @@
-export * from './LabeledCheckboxMaterialUi';
+export { default } from "./LabeledCheckboxMaterialUi";

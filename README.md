@@ -132,3 +132,7 @@ export default App;
 ### 2.6.0
 
 - Updated packages
+
+### 2.6.1
+
+- Fixed crash produced by "export \* from"

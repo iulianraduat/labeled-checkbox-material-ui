@@ -14,18 +14,18 @@ The component accepts the props defined bellow in the table.
 
 ### Props accepted by LabeledCheckboxMaterialUi
 
-| Added two new props: classNameCheckbox and classNameLabel | Name                       | Type | Required  | Default                                                         | Description |
-| --------------------------------------------------------- | -------------------------- | ---- | --------- | --------------------------------------------------------------- | ----------- |
-| checked                                                   | boolean                    | no   | false     | If true, the checkbox is selected                               |
-| classNameCheckbox                                         | string                     | no   | undefined | The className applied to the checkbox                           |
-| classNameLabel                                            | string                     | no   | undefined | The className applied to the label                              |
-| color                                                     | string                     | no   | primary   | The color of the checkbox                                       |
-| disabled                                                  | boolean                    | no   | false     | The component is disabled                                       |
-| label                                                     | string                     | yes  | -         | The label of the checkbox                                       |
-| onChange                                                  | (checked: boolean) => void | no   | undefined | The callback function called when the checkbox value is changed |
-| styleCheckbox                                             | CSSProperties              | no   | undefined | The style applied to the checkbox                               |
-| styleLabel                                                | CSSProperties              | no   | undefined | The style applied to the label                                  |
-| value                                                     | string                     | no   | undefined | The value of the checkbox                                       |
+| Name              | Type                       | Required | Default   | Description                                                     |
+| ----------------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
+| checked           | boolean                    | no       | false     | If true, the checkbox is selected                               |
+| classNameCheckbox | string                     | no       | undefined | The className applied to the checkbox                           |
+| classNameLabel    | string                     | no       | undefined | The className applied to the label                              |
+| color             | string                     | no       | primary   | The color of the checkbox                                       |
+| disabled          | boolean                    | no       | false     | The component is disabled                                       |
+| label             | string                     | yes      | -         | The label of the checkbox                                       |
+| onChange          | (checked: boolean) => void | no       | undefined | The callback function called when the checkbox value is changed |
+| styleCheckbox     | CSSProperties              | no       | undefined | The style applied to the checkbox                               |
+| styleLabel        | CSSProperties              | no       | undefined | The style applied to the label                                  |
+| value             | string                     | no       | undefined | The value of the checkbox                                       |
 
 ---
 
@@ -139,3 +139,7 @@ export default App;
 ### 2.6.2
 
 - Added two new props: classNameCheckbox and classNameLabel
+
+### 2.6.3
+
+- Fixed Readme

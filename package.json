@@ -1,6 +1,6 @@
 {
   "name": "labeled-checkbox-material-ui",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "description": "A material-ui component which combines a checkbox and a label in a single component",
   "main": "lib/index.js",
   "sideEffects": false,

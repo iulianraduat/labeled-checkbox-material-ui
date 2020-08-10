@@ -3,12 +3,12 @@ import { Checkbox, FormControlLabel } from '@material-ui/core';
 
 const styles: { [key: string]: React.CSSProperties } = {
   checkbox: {
-    padding: '0 5px 0 0'
+    padding: '0 5px 0 0',
   },
   label: {
     marginRight: 7,
-    whiteSpace: 'nowrap'
-  }
+    whiteSpace: 'nowrap',
+  },
 };
 
 class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMaterialUiProps> {
@@ -18,6 +18,7 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
         control={this.getCheckbox()}
         disabled={this.props.disabled}
         label={this.props.label}
+        className={this.getClassNameLabel()}
         style={this.getStyleLabel()}
       />
     );
@@ -35,9 +36,15 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
         disabled={disabled}
         onChange={this.handleChange}
         value={cbValue}
+        className={this.getClassNameCheckbox()}
         style={this.getStyleCheckbox()}
       />
     );
+  }
+
+  private getClassNameLabel() {
+    const { classNameLabel } = this.props;
+    return this.isEmpty(classNameLabel) ? '' : classNameLabel;
   }
 
   private getStyleLabel() {
@@ -49,8 +56,13 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 
     return {
       ...styles.label,
-      ...styleLabel
+      ...styleLabel,
     };
+  }
+
+  private getClassNameCheckbox() {
+    const { classNameCheckbox } = this.props;
+    return this.isEmpty(classNameCheckbox) ? '' : classNameCheckbox;
   }
 
   private getStyleCheckbox() {
@@ -62,7 +74,7 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 
     return {
       ...styles.checkbox,
-      ...styleCheckbox
+      ...styleCheckbox,
     };
   }
 
@@ -91,6 +103,8 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 interface LabeledCheckboxMaterialUiProps {
   color?: string;
   checked?: boolean;
+  classNameCheckbox?: string;
+  classNameLabel?: string;
   disabled?: boolean;
   label: string;
   onChange?: (checked: boolean) => void;

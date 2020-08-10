@@ -1,4 +1,4 @@
-# labeled-checkbox-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/labeled-checkbox-material-ui "Weekly downloads")
+# labeled-checkbox-material-ui ![Weekly downloads](https://img.shields.io/npm/dw/labeled-checkbox-material-ui 'Weekly downloads')
 
 A material-ui component which combines a checkbox and a label in a single component
 
@@ -14,16 +14,18 @@ The component accepts the props defined bellow in the table.
 
 ### Props accepted by LabeledCheckboxMaterialUi
 
-| Name          | Type                       | Required | Default   | Description                                                     |
-| ------------- | -------------------------- | -------- | --------- | --------------------------------------------------------------- |
-| color         | string                     | no       | primary   | The color of the checkbox                                       |
-| checked       | boolean                    | no       | false     | If true, the checkbox is selected                               |
-| disabled      | boolean                    | no       | false     | The component is disabled                                       |
-| label         | string                     | yes      | -         | The label of the checkbox                                       |
-| onChange      | (checked: boolean) => void | no       | undefined | The callback function called when the checkbox value is changed |
-| styleCheckbox | CSSProperties              | no       | undefined | The style applied to the checkbox                               |
-| styleLabel    | CSSProperties              | no       | undefined | The style applied to the label                                  |
-| value         | string                     | no       | undefined | The value of the checkbox                                       |
+| Added two new props: classNameCheckbox and classNameLabel | Name                       | Type | Required  | Default                                                         | Description |
+| --------------------------------------------------------- | -------------------------- | ---- | --------- | --------------------------------------------------------------- | ----------- |
+| checked                                                   | boolean                    | no   | false     | If true, the checkbox is selected                               |
+| classNameCheckbox                                         | string                     | no   | undefined | The className applied to the checkbox                           |
+| classNameLabel                                            | string                     | no   | undefined | The className applied to the label                              |
+| color                                                     | string                     | no   | primary   | The color of the checkbox                                       |
+| disabled                                                  | boolean                    | no   | false     | The component is disabled                                       |
+| label                                                     | string                     | yes  | -         | The label of the checkbox                                       |
+| onChange                                                  | (checked: boolean) => void | no   | undefined | The callback function called when the checkbox value is changed |
+| styleCheckbox                                             | CSSProperties              | no   | undefined | The style applied to the checkbox                               |
+| styleLabel                                                | CSSProperties              | no   | undefined | The style applied to the label                                  |
+| value                                                     | string                     | no   | undefined | The value of the checkbox                                       |
 
 ---
 
@@ -55,17 +57,14 @@ The component accepts the props defined bellow in the table.
 The base component which allows to create read-only or creatable select components for selecting only one or more values:
 
 ```js
-import * as React from "react";
-import LabeledCheckboxMaterialUi from "labeled-checkbox-material-ui";
+import * as React from 'react';
+import LabeledCheckboxMaterialUi from 'labeled-checkbox-material-ui';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <LabeledCheckboxMaterialUi
-          label="Use colors"
-          onChange={this.handleChange}
-        />
+        <LabeledCheckboxMaterialUi label="Use colors" onChange={this.handleChange} />
       </div>
     );
   }
@@ -136,3 +135,7 @@ export default App;
 ### 2.6.1
 
 - Fixed crash produced by "export \* from"
+
+### 2.6.2
+
+- Added two new props: classNameCheckbox and classNameLabel

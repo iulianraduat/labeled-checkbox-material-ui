@@ -3,19 +3,19 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 const style: React.CSSProperties = {
-  height: 20
+  height: 20,
 };
 
 const styles: { [key: string]: React.CSSProperties } = {
   checkbox: {
-    color: '#008000'
+    color: '#008000',
   },
   label: {
     color: '#888888',
     fontStyle: 'italic',
     fontWeight: 'bold',
-    textDecoration: 'underline'
-  }
+    textDecoration: 'underline',
+  },
 };
 
 const showSelectedValue = (id: string) => (checked: boolean) =>
@@ -52,15 +52,43 @@ storiesOf('LabeledCheckboxMaterialUi', module)
       Selected value: <span id="lcbmui4" />
     </div>
   ))
-  .add('styled', () => (
+  .add('styled with classes', () => {
+    const css = `
+    .class-checkbox {
+      padding: 20px !important;
+    }
+    
+    .class-label {
+      font-weight: bold;
+      font-style: italic;
+    }`;
+    const headEl = document.head || document.getElementsByTagName('head')[0];
+    const styleEl = document.createElement('style');
+    headEl.appendChild(styleEl);
+    styleEl.appendChild(document.createTextNode(css));
+
+    return (
+      <div>
+        <LabeledCheckboxMaterialUi
+          label="Checkbox and label styled"
+          classNameCheckbox="class-checkbox"
+          classNameLabel="class-label"
+          onChange={showSelectedValue('lcbmui5')}
+        />
+        <div style={style} />
+        Selected value: <span id="lcbmui5" />
+      </div>
+    );
+  })
+  .add('styled with style', () => (
     <div>
       <LabeledCheckboxMaterialUi
         label="Checkbox and label styled"
         styleCheckbox={styles.checkbox}
         styleLabel={styles.label}
-        onChange={showSelectedValue('lcbmui5')}
+        onChange={showSelectedValue('lcbmui6')}
       />
       <div style={style} />
-      Selected value: <span id="lcbmui5" />
+      Selected value: <span id="lcbmui6" />
     </div>
   ));

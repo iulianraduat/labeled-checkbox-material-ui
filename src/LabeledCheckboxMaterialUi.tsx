@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Checkbox, FormControlLabel } from '@material-ui/core';
+import { Checkbox, FormControlLabel } from '@mui/material';
 
 const styles: { [key: string]: React.CSSProperties } = {
   checkbox: {
@@ -26,7 +26,9 @@ class LabeledCheckboxMaterialUi extends React.PureComponent<LabeledCheckboxMater
 
   private getCheckbox() {
     const { color, checked, disabled, label, value } = this.props;
-    const cbColor: string | any = this.isEmpty(color) ? 'primary' : (color as string);
+    const cbColor: string | any = this.isEmpty(color)
+      ? 'primary'
+      : (color as string);
     const cbValue: string = this.isEmpty(value) ? label : (value as string);
 
     return (

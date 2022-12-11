@@ -1,6 +1,6 @@
-import LabeledCheckboxMaterialUi from '../src/LabeledCheckboxMaterialUi';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import LabeledCheckboxMaterialUi from '../src/LabeledCheckboxMaterialUi';
 
 const style: React.CSSProperties = {
   height: 20,
@@ -19,41 +19,75 @@ const styles: { [key: string]: React.CSSProperties } = {
 };
 
 const showSelectedValue = (id: string) => (checked: boolean) =>
-  (document.getElementById(id).textContent = checked ? 'selected' : 'not selected');
+  (document.getElementById(id)!.textContent = checked
+    ? 'selected'
+    : 'not selected');
 
-storiesOf('LabeledCheckboxMaterialUi', module)
-  .addParameters({ options: { showPanel: false } })
-  .add('with label', () => (
+export default {
+  title: 'LabeledCheckboxMaterialUi',
+  component: LabeledCheckboxMaterialUi,
+} as ComponentMeta<typeof LabeledCheckboxMaterialUi>;
+
+export const WithLabel: ComponentStory<typeof LabeledCheckboxMaterialUi> =
+  () => (
     <div>
-      <LabeledCheckboxMaterialUi label="I like it" onChange={showSelectedValue('lcbmui1')} />
+      <LabeledCheckboxMaterialUi
+        label="I like it"
+        onChange={showSelectedValue('lcbmui1')}
+      />
       <div style={style} />
       Selected value: <span id="lcbmui1" />
     </div>
-  ))
-  .add('with value', () => (
+  );
+
+export const WithValue: ComponentStory<typeof LabeledCheckboxMaterialUi> =
+  () => (
     <div>
-      <LabeledCheckboxMaterialUi label="I like it" value="aValue" onChange={showSelectedValue('lcbmui2')} />
+      <LabeledCheckboxMaterialUi
+        label="I like it"
+        value="aValue"
+        onChange={showSelectedValue('lcbmui2')}
+      />
       <div style={style} />
       Selected value: <span id="lcbmui2" />
     </div>
-  ))
-  .add('controlled', () => (
+  );
+
+export const Controlled: ComponentStory<typeof LabeledCheckboxMaterialUi> =
+  () => (
     <div>
-      <LabeledCheckboxMaterialUi label="Checked" checked={true} onChange={showSelectedValue('lcbmui3')} />
-      <LabeledCheckboxMaterialUi label="Unchecked" checked={false} onChange={showSelectedValue('lcbmui3')} />
+      <LabeledCheckboxMaterialUi
+        label="Checked"
+        checked={true}
+        onChange={showSelectedValue('lcbmui3')}
+      />
+      <LabeledCheckboxMaterialUi
+        label="Unchecked"
+        checked={false}
+        onChange={showSelectedValue('lcbmui3')}
+      />
       <div style={style} />
       Selected value: <span id="lcbmui3" />
     </div>
-  ))
-  .add('disabled', () => (
+  );
+
+export const Disabled: ComponentStory<typeof LabeledCheckboxMaterialUi> =
+  () => (
     <div>
-      <LabeledCheckboxMaterialUi label="Disabled" disabled={true} onChange={showSelectedValue('lcbmui4')} />
+      <LabeledCheckboxMaterialUi
+        label="Disabled"
+        disabled={true}
+        onChange={showSelectedValue('lcbmui4')}
+      />
       <div style={style} />
       Selected value: <span id="lcbmui4" />
     </div>
-  ))
-  .add('styled with classes', () => {
-    const css = `
+  );
+
+export const StyledWithClasses: ComponentStory<
+  typeof LabeledCheckboxMaterialUi
+> = () => {
+  const css = `
     .class-checkbox {
       padding: 20px !important;
     }
@@ -62,25 +96,27 @@ storiesOf('LabeledCheckboxMaterialUi', module)
       font-weight: bold;
       font-style: italic;
     }`;
-    const headEl = document.head || document.getElementsByTagName('head')[0];
-    const styleEl = document.createElement('style');
-    headEl.appendChild(styleEl);
-    styleEl.appendChild(document.createTextNode(css));
+  const headEl = document.head || document.getElementsByTagName('head')[0];
+  const styleEl = document.createElement('style');
+  headEl.appendChild(styleEl);
+  styleEl.appendChild(document.createTextNode(css));
 
-    return (
-      <div>
-        <LabeledCheckboxMaterialUi
-          label="Checkbox and label styled"
-          classNameCheckbox="class-checkbox"
-          classNameLabel="class-label"
-          onChange={showSelectedValue('lcbmui5')}
-        />
-        <div style={style} />
-        Selected value: <span id="lcbmui5" />
-      </div>
-    );
-  })
-  .add('styled with style', () => (
+  return (
+    <div>
+      <LabeledCheckboxMaterialUi
+        label="Checkbox and label styled"
+        classNameCheckbox="class-checkbox"
+        classNameLabel="class-label"
+        onChange={showSelectedValue('lcbmui5')}
+      />
+      <div style={style} />
+      Selected value: <span id="lcbmui5" />
+    </div>
+  );
+};
+
+export const StyledWithStyle: ComponentStory<typeof LabeledCheckboxMaterialUi> =
+  () => (
     <div>
       <LabeledCheckboxMaterialUi
         label="Checkbox and label styled"
@@ -91,4 +127,4 @@ storiesOf('LabeledCheckboxMaterialUi', module)
       <div style={style} />
       Selected value: <span id="lcbmui6" />
     </div>
-  ));
+  );

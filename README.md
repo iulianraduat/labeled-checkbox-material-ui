@@ -44,6 +44,7 @@ The component accepts the props defined bellow in the table.
 |                            2.5.x |   4.10.2    |      16.9.0      |
 |                            2.6.x |   4.11.0    |      16.9.0      |
 |                            2.7.x |   4.11.3    | 16.9.0 or 17.0.0 |
+|                            3.0.x |   5.10.17   |      18.0.0      |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -65,7 +66,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <LabeledCheckboxMaterialUi label="Use colors" onChange={this.handleChange} />
+        <LabeledCheckboxMaterialUi
+          label="Use colors"
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
@@ -153,3 +157,7 @@ export default App;
 ### 2.7.1
 
 - Updated packages
+
+### 3.0.0
+
+- Supports minimum React 18

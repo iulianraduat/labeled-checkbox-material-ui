@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export interface LabeledCheckboxMaterialUiProps extends React.Props<LabeledCheckboxMaterialUi> {
+export interface LabeledCheckboxMaterialUiProps {
   checked?: boolean;
   classNameCheckbox?: string;
   classNameLabel?: string;

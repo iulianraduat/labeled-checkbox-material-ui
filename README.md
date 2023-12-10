@@ -45,6 +45,7 @@ The component accepts the props defined bellow in the table.
 |                            2.6.x |   4.11.0    |      16.9.0      |
 |                            2.7.x |   4.11.3    | 16.9.0 or 17.0.0 |
 |                            3.0.x |   5.10.17   |      18.0.0      |
+|                            3.1.x |   5.14.20   |      18.0.0      |
 
 ### About versioning schema used for LabeledCheckboxMaterialUi
 
@@ -161,3 +162,7 @@ export default App;
 ### 3.0.0
 
 - Supports minimum React 18
+
+### 3.1.0
+
+- Updated packages

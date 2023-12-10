@@ -1,4 +1,9 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import {
+  ComponentMeta,
+  ComponentStory,
+  Meta,
+  StoryObj,
+} from '@storybook/react';
 import React from 'react';
 import LabeledCheckboxMaterialUi from '../src/LabeledCheckboxMaterialUi';
 
@@ -23,66 +28,64 @@ const showSelectedValue = (id: string) => (checked: boolean) =>
     ? 'selected'
     : 'not selected');
 
-export default {
+const meta: Meta<typeof LabeledCheckboxMaterialUi> = {
   title: 'LabeledCheckboxMaterialUi',
   component: LabeledCheckboxMaterialUi,
-} as ComponentMeta<typeof LabeledCheckboxMaterialUi>;
+} as Meta<typeof LabeledCheckboxMaterialUi>;
+export default meta;
+type Story = StoryObj<typeof LabeledCheckboxMaterialUi>;
 
-export const WithLabel: ComponentStory<typeof LabeledCheckboxMaterialUi> =
-  () => (
-    <div>
-      <LabeledCheckboxMaterialUi
-        label="I like it"
-        onChange={showSelectedValue('lcbmui1')}
-      />
-      <div style={style} />
-      Selected value: <span id="lcbmui1" />
-    </div>
-  );
+export const WithLabel = () => (
+  <div>
+    <LabeledCheckboxMaterialUi
+      label="I like it"
+      onChange={showSelectedValue('lcbmui1')}
+    />
+    <div style={style} />
+    Selected value: <span id="lcbmui1" />
+  </div>
+);
 
-export const WithValue: ComponentStory<typeof LabeledCheckboxMaterialUi> =
-  () => (
-    <div>
-      <LabeledCheckboxMaterialUi
-        label="I like it"
-        value="aValue"
-        onChange={showSelectedValue('lcbmui2')}
-      />
-      <div style={style} />
-      Selected value: <span id="lcbmui2" />
-    </div>
-  );
+export const WithValue = () => (
+  <div>
+    <LabeledCheckboxMaterialUi
+      label="I like it"
+      value="aValue"
+      onChange={showSelectedValue('lcbmui2')}
+    />
+    <div style={style} />
+    Selected value: <span id="lcbmui2" />
+  </div>
+);
 
-export const Controlled: ComponentStory<typeof LabeledCheckboxMaterialUi> =
-  () => (
-    <div>
-      <LabeledCheckboxMaterialUi
-        label="Checked"
-        checked={true}
-        onChange={showSelectedValue('lcbmui3')}
-      />
-      <LabeledCheckboxMaterialUi
-        label="Unchecked"
-        checked={false}
-        onChange={showSelectedValue('lcbmui3')}
-      />
-      <div style={style} />
-      Selected value: <span id="lcbmui3" />
-    </div>
-  );
+export const Controlled = () => (
+  <div>
+    <LabeledCheckboxMaterialUi
+      label="Checked"
+      checked={true}
+      onChange={showSelectedValue('lcbmui3')}
+    />
+    <LabeledCheckboxMaterialUi
+      label="Unchecked"
+      checked={false}
+      onChange={showSelectedValue('lcbmui3')}
+    />
+    <div style={style} />
+    Selected value: <span id="lcbmui3" />
+  </div>
+);
 
-export const Disabled: ComponentStory<typeof LabeledCheckboxMaterialUi> =
-  () => (
-    <div>
-      <LabeledCheckboxMaterialUi
-        label="Disabled"
-        disabled={true}
-        onChange={showSelectedValue('lcbmui4')}
-      />
-      <div style={style} />
-      Selected value: <span id="lcbmui4" />
-    </div>
-  );
+export const Disabled = () => (
+  <div>
+    <LabeledCheckboxMaterialUi
+      label="Disabled"
+      disabled={true}
+      onChange={showSelectedValue('lcbmui4')}
+    />
+    <div style={style} />
+    Selected value: <span id="lcbmui4" />
+  </div>
+);
 
 export const StyledWithClasses: ComponentStory<
   typeof LabeledCheckboxMaterialUi
@@ -115,16 +118,15 @@ export const StyledWithClasses: ComponentStory<
   );
 };
 
-export const StyledWithStyle: ComponentStory<typeof LabeledCheckboxMaterialUi> =
-  () => (
-    <div>
-      <LabeledCheckboxMaterialUi
-        label="Checkbox and label styled"
-        styleCheckbox={styles.checkbox}
-        styleLabel={styles.label}
-        onChange={showSelectedValue('lcbmui6')}
-      />
-      <div style={style} />
-      Selected value: <span id="lcbmui6" />
-    </div>
-  );
+export const StyledWithStyle = () => (
+  <div>
+    <LabeledCheckboxMaterialUi
+      label="Checkbox and label styled"
+      styleCheckbox={styles.checkbox}
+      styleLabel={styles.label}
+      onChange={showSelectedValue('lcbmui6')}
+    />
+    <div style={style} />
+    Selected value: <span id="lcbmui6" />
+  </div>
+);
